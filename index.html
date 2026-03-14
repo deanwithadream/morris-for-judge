@@ -240,14 +240,76 @@
     @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 
     /* ── RESPONSIVE ── */
+    /* ── TABLET ── */
     @media (max-width: 860px) {
       .about-layout, .vol-layout { grid-template-columns: 1fr; gap: 3rem; }
       .photo-wrap { display: none; }
-      .cred-grid { grid-template-columns: 1fr; }
-      .belief-cards { grid-template-columns: 1fr; }
+      .cred-grid { grid-template-columns: 1fr 1fr; }
+      .belief-cards { grid-template-columns: 1fr 1fr; }
       .frow { grid-template-columns: 1fr; }
       .nav-right .nav-link { display: none; }
+      .nav-right .nbtn { display: none; }
       .hamburger { display: flex; }
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 580px) {
+      /* Nav */
+      nav { padding: 0 1.25rem; height: 64px; }
+      .nav-text-main { font-size: 1.1rem; }
+      .nav-text-top, .nav-text-sub { display: none; }
+      .nav-mono { width: 38px; height: 38px; font-size: 0.85rem; }
+
+      /* Hero */
+      #home { padding: 7rem 1.25rem 4rem; }
+      .hero-name { font-size: clamp(3.2rem, 16vw, 5rem); line-height: 0.9; }
+      .hero-race { font-size: 0.7rem; letter-spacing: 0.12em; }
+      .hero-tagline { font-size: 1.1rem; margin-bottom: 2rem; }
+      .hero-btns { flex-direction: column; align-items: center; gap: 0.75rem; }
+      .pbtn { width: 100%; max-width: 280px; text-align: center; padding: 0.9rem 1.5rem; }
+
+      /* Sections */
+      section { padding: 4rem 1.25rem; }
+      .sh { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+
+      /* About */
+      .cred-grid { grid-template-columns: 1fr; }
+      .about-body p { font-size: 0.97rem; }
+
+      /* Platform cards */
+      .belief-cards { grid-template-columns: 1fr; gap: 1rem; }
+      .bc { padding: 1.75rem 1.5rem; }
+
+      /* Endorsements - stack on mobile */
+      #endorsements .si > div[style*="grid-template-columns:1fr 1fr"] {
+        grid-template-columns: 1fr !important;
+      }
+
+      /* Volunteer */
+      .form-box { padding: 1.5rem; }
+      .ways { gap: 0.5rem; }
+
+      /* Donate */
+      .d-grid { gap: 0.65rem; }
+      .dpill { font-size: 1rem; padding: 0.85rem 1.75rem; }
+      #donate > .si > p { font-size: 0.97rem; }
+
+      /* Footer */
+      footer { padding: 3rem 1.25rem 2rem; }
+      .f-nav { gap: 1rem; }
+      .f-nav a { font-size: 0.82rem; }
+      .footer-contact { font-size: 0.82rem; }
+
+      /* Mobile menu */
+      .mobile-menu { padding: 1.25rem; }
+      .mobile-menu a { font-size: 1rem; padding: 0.75rem 0; }
+    }
+
+    /* ── VERY SMALL PHONES ── */
+    @media (max-width: 380px) {
+      .hero-name { font-size: 2.8rem; }
+      .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.18em; }
+      .nbtn { padding: 0.45rem 1rem; font-size: 0.8rem; }
     }
   </style>
 </head>
